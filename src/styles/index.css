@@ -10,11 +10,8 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
-.Fondo {
-    background-color: lightgrey;
-}
 .todos {
-    font-size: 60px;
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
+    font-size: 80px;
+    color: rgb(211, 205, 205);
+    font-weight: 60;
 }
