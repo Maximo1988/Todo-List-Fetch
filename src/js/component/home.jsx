@@ -29,7 +29,7 @@ function Home() {
 	};
 
 	let styleBox = {
-		width: "500px",
+		width: "600px",
 		height: "auto",
 		margin: "auto",
 	};
@@ -47,7 +47,7 @@ function Home() {
 						<input
 							type="text"
 							className="form-control mb-2 border-0 w-75 mx-auto"
-							placeholder="What needs to be done?"
+							placeholder="¿Que se necesita hacer?"
 							onChange={(e) => setTarea(e.target.value)}
 							value={tarea}></input>
 					</form>
