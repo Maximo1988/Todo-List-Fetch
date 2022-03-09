@@ -15,3 +15,7 @@
     color: rgb(211, 205, 205);
     font-weight: 60;
 }
+#boton {
+    text-align: center;
+    margin-left: 250px;
+}

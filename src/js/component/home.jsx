@@ -71,6 +71,12 @@ function Home() {
 						<p className="mt-0">{cantLista()} item left</p>
 					</div>
 				</div>
+				<button
+					className="btn btn-warning"
+					id="boton"
+					onclick="myFunction()">
+					Limpiar Pendientes
+				</button>
 			</div>
 			<div className="col-3 bg-dark"></div>
 		</div>
