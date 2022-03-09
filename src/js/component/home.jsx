@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { nanoid } from "nanoid";
 
 function Home() {
-	const [tarea, setTarea] = React.useState("");
-	const [pendientes, setPendientes] = React.useState([]);
+	const [tarea, setTarea] = useState("");
+	const [pendientes, setPendientes] = useState([]);
+	
 
 	const agregarTarea = (e) => {
 		e.preventDefault();
