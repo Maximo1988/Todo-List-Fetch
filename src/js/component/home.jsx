@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { nanoid } from "nanoid";
+import { AgregarTarea } from "agregarTarea";
 
 
 const Home = () => {
@@ -36,14 +36,14 @@ const Home = () => {
 	.then((response) => (console.log(response))
 	);
 
-	const agregarTarea = (e) => {
+	const AgregarTarea = (e) => {
 		e.preventDefault();
 		if (!tarea.trim()) {
 			console.log("campo vacio");
 			return;
 		}
 
-		setPendientes([...pendientes, { id: nanoid(), NombreTarea: tarea }]);
+		setPendientes([...pendientes, { id: AgregarTarea(), NombreTarea: tarea }]);
 
 		setTarea("");
 	};
@@ -74,7 +74,7 @@ const Home = () => {
 					<form
 						action=""
 						className="d-flex flex-row align-items-center"
-						onSubmit={agregarTarea}>
+						onSubmit={AgregarTarea}>
 						<input
 							type="text"
 							className="form-control mb-2 border-0 w-75 mx-auto"
