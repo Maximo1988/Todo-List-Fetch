@@ -1,10 +1,40 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { nanoid } from "nanoid";
 
-function Home() {
+
+const Home = () => {
 	const [tarea, setTarea] = useState("");
 	const [pendientes, setPendientes] = useState([]);
-	
+	useEffect (()=>{
+		createData();
+		getData();
+		},[])
+	const getData = () => {
+	fetch("https://assets.breatheco.de/apis/fake/todos/user/Maximo1988", {
+	method: "GET",
+		headers: { "content-type": "application/json" },
+	})
+		.then((resp) => resp.json())
+		.then((data) => setPendientes(data))
+		.catch((err) => {console.log(err);
+		});
+	const subirData = (body) => {
+		const settingFetch = {
+			method: "PUT",
+			body: JSON.stringify(body),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+	}
+
+	fetch(
+		"https://assets.breatheco.de/apis/fake/todos/user/Maximo1988",
+		settingFetch
+	)
+	.then((respuesta) => respuesta.json())
+	.then((response) => (console.log(response))
+	);
 
 	const agregarTarea = (e) => {
 		e.preventDefault();
@@ -82,6 +112,6 @@ function Home() {
 			<div className="col-3 bg-dark"></div>
 		</div>
 	);
-}
+};
 
 export default Home;
